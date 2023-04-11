@@ -168,10 +168,9 @@
      <script> /* This script initiates the canvas and puts the text on the canvas "myCanvas2" */
         var canvas2 = document.getElementById('myCanvas2');
         var ctx2 = canvas2.getContext("2d");
-        var context = canvas.getContext("2d");
-        context.font = '20pt Calibri';
-        context.fillStyle = "black";
-        context.fillText("Blue image will go here!", 40, 20);
+        ctx2.font = '20pt Calibri';
+        ctx2.fillStyle = "black";
+        ctx2.fillText("Blue image will go here!", 10, 20);
      </script>
      <!--This is basically a copy of the first canvas HTML code, except the second canvas and its context are implemented. -->
      <!-- Also with App 6, I had to move my script below my canvas for it to work, so I think because the script is already below the canvas here, I shouldn't run into problems.-->
