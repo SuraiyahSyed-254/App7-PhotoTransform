@@ -123,6 +123,9 @@
          /* This piece of code was provided by ChatGPT after I asked, "I need help removing the red and green intensities and only displaying the blue ones." */
          /* Essentially, this for function retrieves imageData using those variables I made on lines 108/109 and iterates through pixels. Red and green intensities are set to 0, to prevent display, and you keep blue! */
          
+         ctx2.putImageData(imageData, 0, 0);
+         /* I'm updating canvas with image data from the for function. */
+         
         } // end of img.onload
         
         img.src = reader.result;
