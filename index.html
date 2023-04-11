@@ -105,7 +105,10 @@
           var ctx2 = canvas2.getContext("2d");
          /* This is to add the second canvas and receive the context for it, alongside the first. */
           
-          
+          var imageData = context.getImageData(0, 0, 600, 500);
+          var data = imageData.data;
+         /* These variables are being used to retreive image Data from canvas, and will be used in coordination with HTML to retreive from the original canvas. */
+         /* "The getImageData() method requires that the image is hosted on a web server with the same domain as the code executing it.  If this condition is not met, a SECURITY_ERR exception will be thrown." - https://www.html5canvastutorials.com/advanced/html5-canvas-grayscale-image-colors-tutorial/ */
           
         } // end of img.onload
         
