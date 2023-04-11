@@ -101,7 +101,7 @@
           /*  ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
 
           /* PUT ANY CHANGES TO THE JAVASCRIPT HERE  */
-          var canvas2 = document.getElementbyId('myCanvas2');
+          var canvas2 = document.getElementById('myCanvas2');
           var ctx2 = canvas2.getContext("2d");
          /* This is to add the second canvas and receive the context for it, alongside the first. */
           
@@ -166,7 +166,7 @@
      
      <canvas id="myCanvas2" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas>
      <script> /* This script initiates the canvas and puts the text on the canvas "myCanvas2" */
-        var canvas2 = document.getElementbyId('myCanvas2');
+        var canvas2 = document.getElementById('myCanvas2');
         var ctx2 = canvas2.getContext("2d");
         var context = canvas.getContext("2d");
         context.font = '20pt Calibri';
