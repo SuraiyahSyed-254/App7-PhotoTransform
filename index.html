@@ -109,7 +109,20 @@
           var data = imageData.data;
          /* These variables are being used to retreive image Data from canvas, and will be used in coordination with HTML to retreive from the original canvas. */
          /* "The getImageData() method requires that the image is hosted on a web server with the same domain as the code executing it.  If this condition is not met, a SECURITY_ERR exception will be thrown." - https://www.html5canvastutorials.com/advanced/html5-canvas-grayscale-image-colors-tutorial/ */
+         
+         for (var i = 0; i < data.length; i += 4) 
+         {
+              var red = data[i];
+              var green = data[i + 1];
+              var blue = data[i + 2];
           
+              data[i] = 0;
+              data[i + 1] = 0;
+              data[i + 2] = blue;
+         }
+         /* This piece of code was provided by ChatGPT after I asked, "I need help removing the red and green intensities and only displaying the blue ones." */
+         /* Essentially, this for function retrieves imageData using those variables I made on lines 108/109 and iterates through pixels. Red and green intensities are set to 0, to prevent display, and you keep blue! */
+         
         } // end of img.onload
         
         img.src = reader.result;
